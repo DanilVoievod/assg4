@@ -1,0 +1,148 @@
+/* Apply styles to the nav-bar class */
+.nav-bar {
+    background-color: #3498db; /* Blue */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Apply styles to the content class */
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ecf0f1; /* Light Gray */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Apply styles to the footer class */
+.footer {
+    background-color: #2c3e50; /* Dark Blue */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Descendant selector: Apply styles to 'a' elements within the nav-bar class */
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Child selector: Apply styles to 'li' elements that are direct children of the ul within the nav-bar class */
+.nav-bar > ul > li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Adjacent sibling selector: Apply styles to the content class that directly follows the nav-bar class */
+.nav-bar + .content {
+    border-top: 2px solid #3498db; /* Blue */
+}
+
+/* Descendant selector: Apply styles to 'p' elements within the content class */
+.content p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Descendant selector: Apply styles to 'p' elements within the footer class */
+.footer p {
+    margin: 0;
+}
+
+/* Additional styles for better visibility */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #ecf0f1; /* Light Gray */
+}
+
+/* Style the links within the footer */
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Pseudo-classes */
+/* Apply styles to the first 'li' element within the nav-bar class */
+.nav-bar li:first-child {
+    font-weight: bold;
+}
+
+/* Apply styles to the last 'li' element within the nav-bar class */
+.nav-bar li:last-child {
+    margin-right: 0;
+}
+
+/* Apply styles to 'a' elements within the nav-bar class when hovered */
+.nav-bar a:hover {
+    text-decoration: underline;
+    color: #2980b9; /* Dark Blue */
+}
+
+/* Apply styles to 'p' elements within the content class when the parent is hovered */
+.content:hover p {
+    color: #e74c3c; /* Red */
+}
+
+/* Pseudo-elements */
+/* Add a double border above and below the content class */
+.content::before,
+.content::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #3498db; /* Blue */
+    margin: 10px 0;
+}
+
+/* Style the first line of the content class */
+.content::first-line {
+    font-weight: bold;
+    color: #3498db; /* Blue */
+}
+
+/* Style the first letter of each paragraph within the content class */
+.content p::first-letter {
+    font-size: 24px;
+    color: #e74c3c; /* Red */
+}
+
+/* Style the content within the footer class using the before pseudo-element */
+.footer::before {
+    content: "Connect with Us";
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Visibility property */
+/* Show the content class by default */
+.content {
+    transform: translateY(0);
+}
+
+/* Move the content up on hover */
+body:hover .content {
+    transform: translateY(-10px);
+}
+
+/* Opacity property */
+/* Apply a low opacity to the footer class */
+.footer {
+    opacity: 0.9;
+}
+
+/* Display property */
+/* Hide the footer class on screens smaller than 600px */
+@media (max-width: 600px) {
+    .footer {
+        display: none;
+    }
+}
